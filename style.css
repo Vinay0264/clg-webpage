@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center; /* Vertically align items */
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px 20px; /* Add padding for spacing */
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds space between logo and text */
+}
+
+.left-section img {
+    width: 100px; /* Responsive width */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain;
+    border-radius: 100%;
+}
+
+.left-section div {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-section h1 {
+    font-size: 2.1rem;
+    margin: 0;
+    color: #1747f4;
+}
+
+.left-section p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #16479b;
+}
+
+/* Right Section */
+.right-section {
+    display: flex;
+    gap: 20px; /* Adds spacing between logo containers */
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column; /* Stack logo and text vertically */
+    align-items: center; /* Center align items */
+    text-align: center;
+    max-width: 150px; /* Optional: Constrain width for logos and text */
+}
+
+.logo-container img {
+    width: 80px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.logo-container img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.logo-container p {
+    margin-top: 5px; /* Space between logo and text */
+    font-size: 0.7rem;
+    color: #003a9d; /* Text color */
+}
+
+/* Hide short text by default */
+.short-text {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-header {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .left-section img {
+        width: 80px; /* Adjust logo size for smaller screens */
+    }
+
+    .left-section h1 {
+        font-size: 1.25rem;
+    }
+
+    .left-section p {
+        font-size: 0.9rem;
+    }
+
+    .right-section {
+        flex-wrap: wrap; /* Allows logos to wrap to a new line */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .logo-container {
+        max-width: 100px; /* Shrink the logo container width */
+    }
+
+    .logo-container img {
+        width: 70px; /* Reduce logo size for smaller devices */
+    }
+
+    .logo-container p {
+        font-size: 0.75rem; /* Slightly smaller text */
+    }
+
+    .full-text {
+        display: none; /* Hide the full text */
+    }
+
+    .short-text {
+        display: block; /* Show the short text */
+        font-size: 0.85rem; /* Slightly smaller font for short text */
+    }
+}
+
+.clg-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+}
+.button{
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    cursor: pointer;
+    font-size:1rem;
+    text-align: center;
+    position: relative;
+}
+.button:hover{
+    background-color: #1747F4;
+    color:white;
+    transition: 0.3s ease;
+    transform: scale(1.0);
+
+}
+.side-bar{
+    position:fixed;
+    top:auto;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+@media (max-width: 768px){
+
+}
