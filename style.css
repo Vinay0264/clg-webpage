@@ -135,28 +135,95 @@ header {
 }
 
 /* styles for .clg-navbar */ 
-.clg-navbar div{
+.clg-navbar {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center content */
     align-items: center;
-    gap: 25px;
+    gap: 20px; /* Ensure even spacing between all buttons */
+    padding: 10px 0;
     position: relative;
-    flex-wrap: wrap;
-    padding-top: 2%;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
-.clg-navbar button{
+/* Wrap both "Home" and other buttons in a flex container */
+.clg-navbar > * {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Ensures equal spacing between all elements */
+}
+
+/* Button styles */
+.clg-navbar button {
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     background-color: aliceblue;
     cursor: pointer;
     font-size: 1rem;
-    text-align: center;
-    position: relative;
     transition: 0.3s ease;
 }
-.clg-navbar button:hover{
+
+/* Hover effect */
+.clg-navbar button:hover {
     background-color: #1747f4;
-    color:aliceblue
+    color: aliceblue;
+}
+/* Menu Icon (Hidden on Large Screens) */
+.menu-icon {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden on large screens */
+    position: absolute;
+    right: 20px;
+}
+/* Sidebar (Initially Hidden for Small Screens) */
+.sidebar {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: white;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+/* Sidebar Buttons */
+.sidebar button {
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar button:hover {
+    background-color: #1747f4;
+    color: white;
+}
+/* Close Icon */
+.close-icon {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    align-self: flex-end;
+    cursor: pointer;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .clg-navbar {
+        justify-content: space-between; /* Move home button to left */
+    }
+
+    .nav-buttons {
+        display: none; /* Hide normal buttons on small screens */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon on small screens */
+    }
 }

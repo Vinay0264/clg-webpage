@@ -42,25 +42,34 @@
 
         <!-- Navigation Bar -->
         <nav class="clg-navbar">
-            <div class="sidebar">
-                <button>Home</button>
+            <!-- Home Button (Always Visible) -->
+            <button class="home-btn">Home</button>
+    
+            <!-- Normal Navigation Buttons (Visible on Large Screens, Hidden on Small Screens) -->
+            <div class="nav-buttons">
                 <button>About</button>
                 <button>Programs</button>
                 <button>Facilities</button>
-                <button>Training and placements</button>
+                <button>Training & Placements</button>
                 <button>Events</button>
                 <button>Contact</button>
             </div>
-            <div>
-                <button>Home</button>
-                <button>About</button>
-                <button>Programs</button>
-                <button>Facilities</button>
-                <button>Training and placements</button>
-                <button>Events</button>
-                <button>Contact</button>
-            </div>
-        </nav>       
+    
+            <!-- Menu Icon (☰) for Small Screens -->
+            <button class="menu-icon" onclick="toggleSidebar()">&#9776;</button>
+        </nav>
+        <!-- Sidebar (Initially Hidden for Small Screens) -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-icon" onclick="toggleSidebar()">&#10006;</button>
+        <button>About</button>
+        <button>Programs</button>
+        <button>Facilities</button>
+        <button>Training & Placements</button>
+        <button>Events</button>
+        <button>Contact</button>
+    </div>   
     </header>
+
+    <script src="script.js"></script>
 </body>
 </html>
