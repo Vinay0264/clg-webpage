@@ -20,6 +20,7 @@ header {
     display: flex;
     align-items: center;
     gap: 15px; /* Adds space between logo and text */
+    margin: 0 10px;
 }
 
 .left-section img {
@@ -51,6 +52,7 @@ header {
     display: flex;
     gap: 20px; /* Adds spacing between logo containers */
     align-items: center;
+    margin: 0 30px;
 }
 
 .logo-container {
@@ -132,43 +134,29 @@ header {
     }
 }
 
-.clg-navbar{
+/* styles for .clg-navbar */ 
+.clg-navbar div{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 25px;
     position: relative;
+    flex-wrap: wrap;
+    padding-top: 2%;
 }
-.button{
+
+.clg-navbar button{
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     background-color: aliceblue;
     cursor: pointer;
-    font-size:1rem;
+    font-size: 1rem;
     text-align: center;
     position: relative;
-}
-.button:hover{
-    background-color: #1747F4;
-    color:white;
     transition: 0.3s ease;
-    transform: scale(1.0);
-
 }
-.side-bar{
-    position:fixed;
-    top:auto;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    background-color: white;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-@media (max-width: 768px){
-
+.clg-navbar button:hover{
+    background-color: #1747f4;
+    color:aliceblue
 }
