@@ -190,6 +190,7 @@ header {
     background: white;
     box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    z-index: 999;
 }
 /* Sidebar Buttons */
 .sidebar button {
@@ -227,3 +228,14 @@ header {
         display: block; /* Show menu icon on small screens */
     }
 }
+.swiper {
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+

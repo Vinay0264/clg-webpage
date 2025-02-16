@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sri Balaji Institutions</title>
+    <title>Sri Balaji Educational Institutions</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
 </head>
 <body>
     <header>
@@ -70,6 +76,25 @@
     </div>   
     </header>
 
-    <script src="script.js"></script>
+     <section>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="test1.jpg" alt="Slide 1"></div>
+                <div class="swiper-slide"><img src="test2.avif" alt="Slide 2"></div>
+                <div class="swiper-slide"><img src="image3.jpg" alt="Slide 3"></div>
+            </div>
+        
+            <!-- Navigation buttons (optional) -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        
+            <!-- Pagination (dots) -->
+            <div class="swiper-pagination"></div>
+        </div>
+     </section>
+
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
