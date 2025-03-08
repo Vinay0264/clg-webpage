@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height:1.6;
+    background-color: #f9f9f9;
+}
+.about-header {
+    background-image: linear-gradient(rgba(21, 35, 164, 0.518), rgba(21, 35, 164, 0.304)), url('/Images/College\ Photo-1.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    width: 100%;
+    height: 50vh;
+}
+.about-header h2{
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 10px;    
+} 
+.about-header h3{
+     font-size: 1.5rem;
+     margin-bottom: 5px;
+} 
+.about-header h6{
+     font-size: 1.2rem;  
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 40px;
+    max-width: 87%;
+    margin: auto;
+    gap: 50px;
+    background-color:aliceblue;
+    margin-top: 4%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.244);
+    padding-left: 8%; /* Space from the left */
+    padding-right: 8%; /* Space from the right */
+}
+
+.text{
+    flex: 1;
+    max-width: 600px;
+}
+.text h2, .vsk-dairy-facility h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: rgb(1, 63, 249);
+}
+.text p{
+    line-height: 1.6;
+}
+.container img {
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+.details{
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+}
+.details h2, .special h2, .credits h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+.values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.value-box{
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+.value-box h4{
+    margin: 10px 0;
+}
+.history {
+    background-color: aliceblue;
+}
+.history img{
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px; 
+}
+.scl-spl{
+    display: flex;
+    flex-direction: column;
+}
+.vsk-dairy-facility img{
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+.credits {
+    display: flex;
+    flex-direction: row; /* Arrange items side by side */
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    max-width: 87%; /* Controls width, adjust as needed */
+    margin: auto; /* Centers the container */
+    padding-left: 8%; /* Space from the left */
+    padding-right: 8%; /* Space from the right */
+}
+.credits p{
+    font-size: 1rem;
+}
+    
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .container img {
+        max-width: 100%;
+    }
+    .values {
+        align-items: center;
+    }
+    .about-header h2 {
+        font-size: 2rem;
+    }
+    .about-header h3 {
+        font-size: 1.2rem;
+    }
+    .about-header h6 {
+        font-size: 1rem;
+    }
+    .text {
+        text-align: center;
+    }
+    .value-box {
+        margin: auto;
+    }
+}
+.special{
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 87%;
+    margin: 4% auto;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.special h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+.special h2{
+    text-align: center;
+}
