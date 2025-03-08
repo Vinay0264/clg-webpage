@@ -6,6 +6,38 @@ function toggleSidebar() {
         sidebar.style.display = "flex"; // Show sidebar
     }
 }
+function toggleDropdown() {
+    let dropdown = document.querySelector(".sidebar-dropdown-content");
+
+    if(dropdown.style.display === "block"){
+        dropdown.style.display = "none";
+    } 
+    else{
+        dropdown.style.display = "block";
+    }
+}
+
+// script for adding header.html
+fetch("header.html")
+      .then(response => response.text())
+      .then(data=>{
+
+        document.getElementById("header").innerHTML= data;
+
+         // Now the header and navbar are loaded, so we can apply sticky logic
+    makeNavbarSticky();
+         
+      })
+      .catch(error=>console.error("Error loading header.",error));
+
+fetch("footer.html")
+      .then(response => response.text())
+      .then(data=>{
+
+        document.getElementById("footer").innerHTML= data;
+      })
+      .catch(error=>console.error("Error loading header.",error));  
+      
 // sliding functionalty
 var swiper = new Swiper(".mySwiper", {
     loop: true,               // Enables infinite scrolling
@@ -23,4 +55,21 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
+// Function to make navbar sticky after scrolling past the header
+function makeNavbarSticky() {
+    let navbar = document.querySelector(".clg-navbar"); // Select the navbar
+    let header = document.querySelector("header"); // Select the header section
+    let body = document.body;
 
+    if (!navbar || !header) return; // Safety check
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY >= header.offsetHeight) {
+            navbar.classList.add("fixed-nav");
+            body.classList.add("fixed-nav-padding"); // Prevent content shift
+        } else {
+            navbar.classList.remove("fixed-nav");
+            body.classList.remove("fixed-nav-padding");
+        }
+    });
+}

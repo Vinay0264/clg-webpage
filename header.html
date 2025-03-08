@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Header </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Institution Info Section -->
+         <div class="up-head"> </div>
+        <div class="header">
+            <div class="left-section">
+                <img src="https://res.cloudinary.com/doer0ip40/image/upload/v1739168495/logo2_cefgrq.jpg" alt="Sri Balaji Educational Institutions Logo">
+                <div>
+                    <h1>Sri Balaji Educational Institutions</h1>
+                    <p>LIC Colony, Pendurthi, Visakhapatnam-531173</p>
+                </div>
+            </div>
+            <div class="right-section">
+                <!-- Secondary Education Logo -->
+                <div class="logo-container">
+                    <img src="https://res.cloudinary.com/doer0ip40/image/upload/t_Profile/v1739169920/secondary_education_logo_bflpuh.png" alt="Secondary Education Logo">
+                    <p class="full-text">Rec.by Govt of AP, Board of Secondary Education</p>
+                    <p class="short-text">Rec. by Govt of AP, BSE</p>
+                </div>
+                <!-- Intermediate Education Logo -->
+                <div class="logo-container">
+                    <img src="https://res.cloudinary.com/doer0ip40/image/upload/v1739169920/inter_logo_llhdyd.jpg" alt="Intermediate Education Logo">
+                    <p class="full-text">Rec.by Govt of AP, Board of Intermediate Education</p>
+                    <p class="short-text">Rec. by Govt of AP, BIE</p>
+                </div>
+                <!-- AU Affiliated Logo -->
+                <div class="logo-container">
+                    <img src="https://res.cloudinary.com/doer0ip40/image/upload/t_Profile/v1741234939/Au_logo_mzwouv.png" alt="AU Affiliated Logo">
+                    <p class="full-text">Affiliated with<br> Andhra University</p>
+                    <p class="short-text">AU Aff.<br>College</p>
+                </div>
+            </div>
+        </div>
+   </header>
+
+      <!-- Navigation Bar -->
+      <nav class="clg-navbar">
+        <!-- Home Button -->
+        <a href="index.html" class="home-btn">Home</a>
+  
+        <!-- Navigation Buttons (Visible on Large Screens) -->
+        <div class="nav-buttons">
+  
+            <a href="about.html">About</a>         
+            
+            <!-- Dropdown for Academic Programs -->
+            <div class="dropdown">                   
+                <a class="dropdown-btn">Academic Programs</a>
+                <div class="dropdown-content">
+                    <a href="school.html">School</a>
+                    <a href="inter.html">Inter</a>
+                    <a href="degree.html">Degree</a>
+                </div>
+            </div>
+    
+            <a href="facilities.html">Facilities</a>
+            <a href="placements.html">Training & Placements</a>
+            <a href="contact.html">Contact</a>
+            <a href="apply.html" class="a-btn">Apply now</a>
+        </div>
+    
+      <!-- Menu Icon (☰) for Small Screens -->
+      <button class="menu-icon" onclick="toggleSidebar()">&#9776;</button>
+    </nav>
+    <!-- Sidebar (Initially Hidden for Small Screens) -->
+    <div class="sidebar" id="sidebar">
+    <button class="close-icon" onclick="toggleSidebar()">&#10006;</button>
+        <a  href="about.html">About</a>
+  
+          <!-- Sidebar Dropdown for Mobile -->
+      <div class="sidebar-dropdown">
+          <a class="sidebar-dropdown-btn" onclick="toggleDropdown()">Academic Programs</a>
+          <div class="sidebar-dropdown-content">
+              <a href="school.html">School</a>
+              <a href="inter.html">Inter</a>
+              <a href="degree.html">Degree</a>
+          </div>
+      </div>  
+      
+        <a  href="facilities.html">Facilities</a>
+        <a  href="placements.html">Training & Placements</a>
+        <a  href="contact.html">Contact</a>
+        <a href="apply.html" class="a-btn">Apply now</a>
+
+    </div> 
+
+
+
+</body>
+</html>
