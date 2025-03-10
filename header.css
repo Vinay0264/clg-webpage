@@ -6,7 +6,7 @@ body {
 .up-head{
     background-color: rgb(1, 63, 249);
     width: 100%;
-    height: 50px;
+    height: 40px;
 }
 .header {
     display: flex;
@@ -25,7 +25,7 @@ body {
 }
 
 .left-section img {
-    width: 100px; /* Responsive width */
+    width: 80px; /* Responsive width */
     height: auto; /* Maintains aspect ratio */
     object-fit: contain;
     border-radius: 100%;
@@ -37,11 +37,10 @@ body {
 }
 
 .left-section h1 {
-    font-size: 2.1rem;
+    font-size: 1.9rem;
     margin: 0;
     color: #1747f4;
 }
-
 .left-section p {
     margin: 5px 0 0;
     font-size: 1rem;
@@ -77,7 +76,7 @@ body {
 
 .logo-container p {
     margin-top: 5px; /* Space between logo and text */
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: #003a9d; /* Text color */
 }
 
@@ -96,8 +95,8 @@ body {
     }
 
     .left-section img {
-        width: 60px;
-        display: none; /* Adjust logo size for smaller screens */
+        width: 50px;
+        height: auto; /* Adjust logo size for smaller screens */
     }
 
     .left-section h1 {
@@ -170,7 +169,7 @@ body.fixed-nav-padding {
 
 .clg-navbar a{
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 8px 15px;
     border-radius: 5px;
     background-color: rgb(1, 63, 249);
     font-size: 1rem;
@@ -191,7 +190,7 @@ body.fixed-nav-padding {
     cursor: pointer;
     background-color: aliceblue;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 8px;
     display: block;
 }
 .dropdown-content {
@@ -200,7 +199,7 @@ body.fixed-nav-padding {
     background-color: white;
     min-width: 150px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 8px;
     flex-direction: column;
     left: 0;
     z-index: 200;
@@ -295,11 +294,12 @@ body.fixed-nav-padding {
 }
 /* Close Icon */
 .close-icon {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     background: none;
     border: none;
     align-self: flex-end;
     cursor: pointer;
+    color: rgb(12, 10, 10);
 }
 
 /* Responsive Styles */

@@ -1,0 +1,20 @@
+.event-header {
+    background-image: linear-gradient(rgba(13, 74, 136, 0.526), rgba(0, 51, 102, 0.858)), url('./Images/Jr\ Event.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+.event-header h2{
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 10px;    
+}  
+.event-header h6{
+     font-size: 1.2rem;  
+}

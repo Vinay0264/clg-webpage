@@ -1,0 +1,188 @@
+*{
+    
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    margin: 0;
+    line-height:1.6;
+    background-color: #f9f9f9;
+}
+.placements-header {
+    background: linear-gradient(rgba(13, 74, 136, 0.526), rgba(0, 51, 102, 0.858)), url('./Images/Training-2.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    width: 100%;
+    height: 50vh;
+}
+.about, .it-training, .defence-training{
+    text-align: center;
+    padding: 40px 20px;
+    width:90%;
+    margin: auto;
+}
+.feature-box{
+    background: white;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(15, 103, 255, 0.277);
+    text-align: left;
+}
+
+.feature-box h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.feature-box p {
+    font-size: 1rem;
+}
+.feature-box i{
+    font-size: 28px;
+    color: #1d4ed8
+}
+.about h2, .it-training h2, .defence-training h2, .students h2, .drive h2, .army h2, .companies h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+.it-training h3, .defence-training h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+.army h2, .drive h2, .about h2{
+    color: rgb(1, 63, 249);  
+}
+.students h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    text-align: left;
+}
+.students{
+    text-align: center;
+    padding: 40px 20px;
+    width:90%;
+    margin: auto;
+}
+.placements-header h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;    
+} 
+.placements-header h6{
+    font-size: 1.2rem;  
+}
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}  
+.values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.value-box{
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 150px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(15, 103, 255, 0.277);
+}
+.value-box h6{
+    margin: 10px 0;
+}
+.value-box img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+} 
+.students p{
+    font-weight: bolder;
+}
+.drive img, .army img{
+    max-width: 350px;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+}
+.army, .drive {
+    display: flex;
+    flex-direction: row; /* Arrange items side by side */
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    background-color:aliceblue;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(15, 103, 255, 0.277);
+    max-width: 80%; /* Controls width, adjust as needed */
+    margin: 0 auto; /* Centers the container */
+    padding-left: 5%; /* Space from the left */
+    padding-right: 5%; /* Space from the right */
+}
+.about{
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    background-color:aliceblue;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(15, 103, 255, 0.277);
+    max-width: 80%; /* Controls width, adjust as needed */
+    margin: 0 auto; /* Centers the container */
+    padding-left: 5%; /* Space from the left */
+    padding-right: 5%; /* Space from the right */
+}
+
+.army .text, .drive .text {
+    flex: 1;
+}
+.cricket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+.cricket img {
+    max-width: 77%; /* Adjust width as needed */
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(15, 103, 255, 0.277);
+}
+.companies {
+    text-align: center;
+    padding: 50px 5%;
+}
+.company-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between images */
+}
+.company-box img {
+    width: 120px;  /* Adjust size */
+    height: 80px;  /* Adjust size */
+    object-fit: contain;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(15, 103, 255, 0.277);
+}
+.company-box img:hover {
+    transform: scale(1.1);
+}

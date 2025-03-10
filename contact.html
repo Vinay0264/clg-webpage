@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Balaji Educational Institutions</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="./Images/Favicon.png">
+</head>
+<body>
+    <div id="header"></div>
+
+    <section class="contact-header">
+        <h2>Contact Us</h2>
+        <h6>We're here to help and answer any questions you might have</h6>
+    </section>
+    <section class="contact">
+     <div class="cnt-left">
+        <div class="visit-us">
+            <h3>Visit Us</h3>
+            <div class="visit-info">
+               <div>
+                <h4><i class="fa-solid fa-location-dot"></i>  Our Campus</h4>
+                <p>LIC Colony, Pendurthi,</p>
+                <p>Visakhapatnam- 531173</p>
+               </div>
+              <div>
+                <h4><i class="fa-solid fa-clock"></i> Office Hours</h4>
+                <p>Monday - Saturday: 8:30 AM - 6:00 PM</p>
+                <p>Sunday: 9:30 AM - 2:00 PM</p>
+              </div>  
+            </div>
+        </div>
+
+     <div class="form">
+        <h3>Send us a Message</h3>
+        <form id="contact-form" >
+            <input type="text" name="name" placeholder="Full Name" required><br>
+            <input type="email" name="email" placeholder="Email Address" required><br>
+            <input type="text" name="subject" placeholder="Subject" required><br>
+            <textarea name="message" placeholder="Message" rows="3" required></textarea><br>
+            <button type="submit">Send Message</button>
+        </form>
+     </div>
+        
+    </div>
+    <div class="info">
+        <div class="dept">
+            <h3>Department Contacts</h3><br>
+            <div>
+            <h4> <i class="fa-solid fa-user-graduate"></i> Admissions</h4>
+            <h5>Shri Kota Nageshwara Rao Sir</h5>
+            <p>Phone: +91 9866707299 <br>
+            Email: sirnageshwar@gmail.com
+            </p> 
+        </div>
+        <div>
+            <h4> <i class="fa-solid fa-book-open"></i> Administration</h4>
+            <h5>Sathyanarayana Sir</h5>
+            <p>Phone: +91 9010237810</p>
+        </div>
+        <div>
+            <h4><i class="fa-solid fa-user-tie"></i> Academic Affairs</h4>
+            <h5>Sathish Sir</h5>
+            <p>Phone: +91 8520963261</p>
+        </div>
+        <div>
+            <h4><i class="fa-solid fa-users"></i> Student Services</h4>
+            <h5>Anoj Kumar Sir</h5>
+            <p>Phone: +91 9550646799</p>
+        </div>
+        <div>
+            <h4><i class="fa-solid fa-shield"></i> Defence Co-Ordinate</h4>
+            <h5>Shankar Naidu Sir</h5>
+            <p>Phone: +91 9492084318</p>
+        </div>
+     </div>
+    </div>    
+    </section>
+    <div id="success-message"></div>        
+    </div>
+    <div id="footer"></div>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+        
+            const form = this;
+            const submitButton = form.querySelector("button");
+            
+            // Disable button & show loading effect
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Sending...';
+        
+            const formData = new FormData(form);
+            
+            fetch("https://script.google.com/macros/s/AKfycbyEIcAR2kURZWVUxDgZrH4jplwvmLj5sXq7CJqMyipdP_aWgShs7IuncyIJRUXhMT6q/exec", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                showSuccessMessage("✅ Thanks for your feedback/complaint. We will definitely look into it!");
+                form.reset();
+            })
+            .catch(error => {
+                showSuccessMessage("❌ Oops! Something went wrong. Please try again.", "error");
+                console.error("Error:", error);
+            })
+            .finally(() => {
+                // Re-enable button & reset text
+                submitButton.disabled = false;
+                submitButton.innerHTML = "Send Message";
+            });
+        });
+        
+        function showSuccessMessage(message) {
+            const messageBox = document.getElementById("success-message");
+            messageBox.innerHTML = message;
+            messageBox.classList.add("show");
+        
+            setTimeout(() => {
+                messageBox.classList.remove("show");
+            }, 5000); // Hide after 5 seconds
+        }
+        </script>
+   <script src="script.js"> </script>
+</body>
+</html>
