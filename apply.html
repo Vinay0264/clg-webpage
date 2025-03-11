@@ -35,16 +35,21 @@
             <p id="genderError" class="error-message"></p>
             <label>Date of Birth:</label>
             <input type="date" name="dob" required><br>
+
             <label>Aadhaar Registered Mobile Number:</label>
             <input type="text" name="student_mobile" required pattern="[0-9]{10}" maxlength="10" minlength="10" title="Mobile number must be 10 digits"
             onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+
             <label>Alternate Mobile Number:</label>
             <input type="text" name="alternate_mobile" pattern="[0-9]{10}" maxlength="10" minlength="10" title="Mobile number must be 10 digits"
             onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+
             <label>Email:</label>
             <input type="email" name="email" required><br>
+
             <label>Address:</label>
             <textarea name="address" required></textarea><br>
+
             <label>Category:</label>
             <div class="radio-group">
                 <input type="radio" id="sc" name="category" value="SC">
@@ -57,8 +62,10 @@
                 <label for="oc">OC</label>
             </div>
             <p id="categoryError" class="error-message"></p>
+
             <label>Name of the Caste:</label>
             <input type="text" name="caste" required><br>
+
             <label>Religion:</label>
             <div class="radio-group">
                 <input type="radio" id="hindu" name="religion" value="Hindu">
@@ -69,18 +76,23 @@
                 <label for="muslim">Muslim</label>
             </div>
             <p id="religionError" class="error-message"></p>
+
             <label>Student Aadhaar Card No:</label>
             <input type="text" name="student_aadhaar" required pattern="[0-9]{12}" maxlength="12" minlength="12" title="Aadhaar must be 12 digits"
             onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+
             <label>Father Aadhaar Card No:</label>
             <input type="text" name="father_aadhaar" required pattern="[0-9]{12}" maxlength="12" minlength="12" title="Aadhaar must be 12 digits"
             onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+
             <label>Mother Aadhaar Card No:</label>
             <input type="text" name="mother_aadhaar" required pattern="[0-9]{12}" maxlength="12" minlength="12" title="Aadhaar must be 12 digits"
             onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+
             <label>Guardian Aadhaar Card No: (Optional)</label>
             <input type="text" name="guardian_aadhaar" pattern="[0-9]{12}" maxlength="12" minlength="12" title="Aadhaar must be 12 digits"
             onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+
             <label>Department:</label><br>
             <div class="radio-group">
                 <input type="radio" id="school" name="department" value="school" onclick="updateCourses()">
@@ -136,8 +148,11 @@
             <button type="button" onclick="submitForm()">Apply Now</button>
         </form>
     </section>
+
     <div id="footer"></div>
+
     <script src="script.js"> </script>
+    
     <script>
         let radio = `<input type='radio' id='${radioId}' name='course' value='${course}' required>`;
         function updateCourses() {

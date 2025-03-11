@@ -146,7 +146,8 @@ button:hover {
 }
 body{
     background-image: url('./Images/Form\ BG.avif');
-    background-size: cover;
+    background-size:cover;
+    background-position: center;
 }
 #loadingOverlay {
     position: fixed;
