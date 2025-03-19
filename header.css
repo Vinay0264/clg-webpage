@@ -250,17 +250,21 @@ body.fixed-nav-padding {
 }
 /* Sidebar (Initially Hidden for Small Screens) */
 .sidebar {
-    display: none;
     flex-direction: column;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     width: 250px;
     height: 100vh;
     background: rgb(255, 255, 255);
     box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     z-index: 999;
+    transition: right 0.65s ease-in-out; /* Smooth slide-in effect */
+
+}
+.sidebar.show {
+    right: 0; /* When toggled, slide in */
 }
 /* Sidebar Buttons */
 .sidebar a {
@@ -301,6 +305,7 @@ body.fixed-nav-padding {
     cursor: pointer;
     color: rgb(12, 10, 10);
 }
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {

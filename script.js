@@ -1,11 +1,24 @@
 function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
-    if (sidebar.style.display === "flex") {
-        sidebar.style.display = "none"; // Hide sidebar
+    const overlay = document.getElementById("overlay");
+
+    if (sidebar.classList.contains("show")) {
+        sidebar.classList.remove("show");
+        overlay.style.display = "none"; // Hide overlay
     } else {
-        sidebar.style.display = "flex"; // Show sidebar
+        sidebar.classList.add("show");
+        overlay.style.display = "block"; // Show overlay
     }
 }
+
+// Close sidebar when clicking outside
+document.addEventListener("click", function(event) {
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar.classList.contains("show") && !sidebar.contains(event.target) && !event.target.closest(".menu-icon")) {
+        toggleSidebar();
+    }
+});
+
 function toggleDropdown() {
     let dropdown = document.querySelector(".sidebar-dropdown-content");
 
